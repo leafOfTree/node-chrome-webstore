@@ -15,7 +15,7 @@
     "tunnel": "0.0.6"
   },
   "devDependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0", 
     "eslint": "^5.9.0",
     "husky": "^1.1.4"
   },

@@ -68,4 +68,9 @@ webstore.items.publish(itemId).then(res => {
 
     npm test
 
+### Refs
+
+[dotenv][1] can help to save auth info to `.env`file
+
 [0]: https://developer.chrome.com/webstore/using_webstore_api
+[1]: https://github.com/motdotla/dotenv
