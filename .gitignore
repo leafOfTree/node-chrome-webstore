@@ -1,0 +1,4 @@
+node_modules
+.env
+my_test.js
+README.html

@@ -1,0 +1,43 @@
+{
+  "name": "node-chrome-webstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "ava": "1.0.0-rc.2",
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concat-stream": "^1.6.2",
+    "dotenv": "^6.1.0",
+    "eslint": "^5.9.0",
+    "form-data": "^2.3.3",
+    "husky": "^1.1.4",
+    "tunnel": "0.0.6"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "node dist/index.js",
+    "eslint": "eslint --cache --fix --ext .js src",
+    "test": "ava"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint && npm run test"
+    }
+  },
+  "ava": {
+    "babel": {
+      "testOptions": {
+        "babelrc": false,
+        "configFile": false
+      }
+    }
+  },
+  "author": "",
+  "license": "ISC"
+}
