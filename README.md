@@ -67,7 +67,7 @@ webstore.items.publish(itemId).then(res => {
 
 ### With dotenv example
 
-[dotenv][1] can help to save auth info to `.env`file
+[dotenv][1] can help to save auth info to `.env` in project root.
 
 ```javascript
 const webstore = require('node-chrome-webstore');
