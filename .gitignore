@@ -1,4 +1,6 @@
 node_modules
 .env
+.eslintcache
+
 my_test.js
 README.html
