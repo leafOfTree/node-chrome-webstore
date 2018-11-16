@@ -74,6 +74,14 @@ test('publish with wrong auth', async t => {
   t.is(error.response.status, 400)
 });
 
+test('publish with no auth', async t => {
+  webstore.auth(undefined);
+  const error = await t.throwsAsync(() => {
+    return webstore.items.publish(itemId);
+  })
+  t.is(error.message, 'Please call auth first!')
+});
+
 test('publish with correct auth', async t => {
   webstore.auth(correctAuth);
   const response = await webstore.items.publish(itemId);

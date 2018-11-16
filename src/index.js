@@ -68,6 +68,9 @@ const api = (function () {
         getAccessToken: () => {
           return new Promise((resolve, reject) => {
             const context = api.chromewebstore;
+            if (!context._auth) {
+              reject(new Error('Please call auth first!'));
+            }
             const {
               client_id,
               client_secret,
