@@ -69,6 +69,21 @@ webstore.items.publish(itemId).then(res => {
 
 [dotenv][1] can help to save auth info to `.env` in project root.
 
+> Strongly recommend against committing your `.env` file to version control. It should be in `.gitignore`.
+
+`.env`
+
+```bash
+client_id=9867219971
+client_secret=5d21TdajfIcK
+refresh_token=1/jBtQRAjjy
+code=4/lgAZRFXy
+itemId=eppeghhopeo
+zipPath=path/to/zip
+```
+
+Read auth info from `.env`
+
 ```javascript
 const webstore = require('node-chrome-webstore');
 
