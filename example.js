@@ -24,11 +24,14 @@ webstore.items.update(itemId, zipPath).then((res) => {
   console.log(res);
   console.log();
 
-  webstore.items.publish(itemId).then((res) => {
-    console.log('[Publish]: ');
-    console.log(res);
-    console.log();
-  });
+  if (res.uploadState === 'SUCCESS') {
+    webstore.items.publish(itemId).then((res) => {
+      console.log('[Publish]: ');
+      console.log(res);
+    });
+  } else {
+    console.log('[Warning]: Update failed, publish is not executed.');
+  }
 });
 
 webstore.items.getAccessToken().then((token) => {
