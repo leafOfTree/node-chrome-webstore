@@ -12,6 +12,12 @@ const {
   zipPath,
 } = process.env;
 
+if (!client_id) {
+  test('exit', t => {
+    process.exit()
+  })
+}
+
 const correctAuth = {
   client_id,
   client_secret,
